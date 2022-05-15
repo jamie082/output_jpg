@@ -7,7 +7,7 @@ import pandas as pd
 import openpyxl
 
 xlsx = openpyxl.Workbook()
-sheet = xlsx.active
+ sheet = xlsx.active
 
 # http://pythontutorial.net/python-basics/python-write/csv-file
 
@@ -30,9 +30,3 @@ classes_select = frame_1.find(class_="Windows").get_text()
 for image in all_imgs:
     print(image['src'])
 
-
-sheet['A1'] = all_imgs
-sheet['B1'] = classes_select
-
-
-xlsx.save('sample.xlsx')
